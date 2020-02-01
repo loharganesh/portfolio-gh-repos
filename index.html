@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript"  src="index.js"></script>
+  </head>
+  <body>
+    <div class="search-bar">
+      <input id="usernameInp" type="text" name="" value="" placeholder="Enter Username to search">
+      <button onclick="getRepos()" id="searchBtn" type="button" name="button">Search</button>
+    </div>
+    <section class="page-wrapper">
+      <div class="content-wrapper">
+        <div class="profile">
+          <img src="images/avatar.png" id="avatar" alt="avatar">
+          <h2 id="name">Profile Name</h2>
+          <p id="username">Username</p>
+        </div>
+          <div id="repo-list" class="repo-list">
+
+            <!--<div class="repo-card">
+              <div class="repo-details">
+                <h2 id="repo-name"></h2>
+                <p id="repo-url"></p>
+              </div>
+              <div class="repo-language">
+                <p id="repo-lang">Python</p>
+              </div>
+            </div>-->
+          </div>
+        </div>
+    </section>
+  </body>
+</html>

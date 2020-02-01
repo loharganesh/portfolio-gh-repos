@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Poppins,ans-serif;
+  font-weight: 400;
+  /*color:  #314453; */
+  color:  #1c2933 ;
+}
+
+input[type=text]{
+  padding: 10px 25px 10px 15px;
+  style: none;
+  border:none;
+  border-radius: 2px;
+  border: 3px solid white;
+  transition-duration: 0.5s;
+  width: 40vw;
+}
+
+input[type=text]:hover,input[type=text]:focus{
+  border: 3px solid  #008dfb;
+}
+
+h2{
+  font-size: 1.2em;
+}
+
+p{
+  font-size: 0.9em;
+}
+
+button{
+  width: 15vw;
+  padding: 10px 25px 10px 25px;
+  border: none;
+  margin-left: 15px;
+  background-color: #008dfb;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  border: 3px solid  #008dfb;
+  width: auto;
+}
+
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items:center;
+}
+
+.search-bar{
+  height: 10vh;
+  min-height: 10vh;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 25px 0 25px;
+}
+
+.content-wrapper{
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  max-height: 80vh;
+  align-self: center;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  padding: 25px 50px 0 50px;
+}
+
+.profile h2{
+  font-weight: 600;
+}
+
+.profile img{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+.repo-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: auto;
+  overflow: auto;
+}
+
+.repo-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-card{
+  display: flex;
+  flex-direction: row;
+  margin: 25px 25px 0 25px;
+  background-color: #f3f3f3;
+  border-radius: 3px;
+  border: 0.5px solid  #1c2933;
+}
+
+.repo-details{
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-details h2{
+  font-weight: 600;
+}
+
+.repo-details p{
+  margin-top: 5px;
+}
+
+.repo-language{
+
+}
+
+.repo-language p{
+  padding: 5px 25px 5px 25px;
+  background-color: #1c2933;
+  border-radius: 0 3px 0 3px;
+  color: white;
+}
+
+@media screen and (max-width:620px){
+  .content-wrapper{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .search-bar{
+    justify-content: center;
+  }
+
+
+}
