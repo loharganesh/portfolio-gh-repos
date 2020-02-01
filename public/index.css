@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
 
 body{
   margin: 0;
@@ -8,13 +8,13 @@ body{
 *{
   margin: 0;
   padding: 0;
-  font-family: Poppins,ans-serif;
+  font-family: Source Sans Pro,ans-serif;
   font-weight: 400;
   /*color:  #314453; */
   color:  #1c2933 ;
 }
 
-input[type=text]{
+.search-bar input[type=text]{
   padding: 10px 25px 10px 15px;
   style: none;
   border:none;
@@ -22,9 +22,10 @@ input[type=text]{
   border: 3px solid white;
   transition-duration: 0.5s;
   width: 40vw;
+  font-size: 1em;
 }
 
-input[type=text]:hover,input[type=text]:focus{
+.search-bar input[type=text]:hover,input[type=text]:focus{
   border: 3px solid  #008dfb;
 }
 
@@ -36,7 +37,7 @@ p{
   font-size: 0.9em;
 }
 
-button{
+.search-bar button{
   width: 15vw;
   padding: 10px 25px 10px 25px;
   border: none;
@@ -53,13 +54,14 @@ button{
   display: flex;
   flex-direction: column;
   height: 90vh;
-  justify-content: center;
-  align-items:center;
+  justify-content: flex-start;
+  align-items:flex-start;
 }
 
 .search-bar{
   height: 10vh;
   min-height: 10vh;
+  max-height: 10vh;
   background-color: #f3f3f3;
   display: flex;
   flex-direction: row;
@@ -71,15 +73,16 @@ button{
 .content-wrapper{
   display: flex;
   flex-direction: row;
-  height: 80vh;
-  max-height: 80vh;
+  width: 100%;
   align-self: center;
 }
 
 .profile{
+  height: auto;
   display: flex;
   flex-direction: column;
-  padding: 25px 50px 0 50px;
+  padding: 25px 25px 25px 25px;
+  max-width: 15vw;
 }
 
 .profile h2{
@@ -94,22 +97,26 @@ button{
 }
 
 .repo-wrapper{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: auto;
-  overflow: auto;
+  flex:1;
+  padding: 25px;
 }
 
 .repo-list{
-  display: flex;
-  flex-direction: column;
+   display: grid;
+   height: fit-content
+   background-color:  #72c2ff;
+   grid-template-columns: auto auto;
+   grid-row-gap: 25px;
+   grid-column-gap: 25px;
+   width: 100%;
 }
 
 .repo-card{
   display: flex;
-  flex-direction: row;
-  margin: 25px 25px 0 25px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  flex-direction: column;
   background-color: #f3f3f3;
   border-radius: 3px;
   border: 0.5px solid  #1c2933;
@@ -126,30 +133,75 @@ button{
   font-weight: 600;
 }
 
-.repo-details p{
+.repo-card .repo-details a{
   margin-top: 5px;
 }
 
 .repo-language{
-
+  width: fit-content;
+  height: auto;
+  align-self: flex-end;
 }
 
 .repo-language p{
   padding: 5px 25px 5px 25px;
   background-color: #1c2933;
-  border-radius: 0 3px 0 3px;
+  border-radius: 0 2px 0 2px;
   color: white;
 }
 
-@media screen and (max-width:620px){
+@media screen and (max-width:940px){
+
+  .page-wrapper{
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .repo-list{
+    grid-template-columns: auto;
+    height: auto;
+  }
+
   .content-wrapper{
     flex-direction: column;
     height: auto;
   }
 
+  .repo-card{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .repo-card .repo-language p{
+    font-size: 0.8em;
+  }
+
+  .repo-card .repo-details h2{
+    font-size: 0.9em;
+  }
+
+  .repo-card .repo-details a{
+    font-size: 0.8em;
+  }
+
   .search-bar{
     justify-content: center;
+    height: auto;
+  }
+
+  .profile{
+    width: auto;
+    max-width: none;
   }
 
 
+}
+
+@media screen and (max-width:340px){
+  .repo-card .repo-details a{
+    font-size: 0.8em;
+    max-width: 250px;
+  }
 }

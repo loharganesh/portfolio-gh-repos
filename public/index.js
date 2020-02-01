@@ -55,6 +55,17 @@ function getRepos(){
         var repoCard = document.createElement('div')
         repoCard.className = 'repo-card'
 
+        var repoLanguage = document.createElement('div')
+        repoLanguage.className = 'repo-language'
+
+        var repoLang = document.createElement('p')
+        
+        if(status.language === null){
+          repoLang.innerText = 'Not Available'
+        }else{
+          repoLang.innerText = status.language
+        }
+
         var repoDetails = document.createElement('div')
         repoDetails.className = 'repo-details'
 
@@ -65,26 +76,13 @@ function getRepos(){
         repoUrl.innerText = status.html_url
         repoUrl.href = status.html_url
 
-        var repoLanguage = document.createElement('div')
-        repoLanguage.className = 'repo-language'
 
-        var repoLang = document.createElement('p')
-
-        if(status.language === null){
-          repoLang.innerText = 'Not Available'
-        }else{
-          repoLang.innerText = status.language
-        }
-
-
-
-        repoCard.appendChild(repoDetails)
         repoCard.appendChild(repoLanguage)
+        repoLanguage.appendChild(repoLang)
+        repoCard.appendChild(repoDetails)
 
         repoDetails.appendChild(repoName)
         repoDetails.appendChild(repoUrl)
-
-        repoLanguage.appendChild(repoLang)
 
         containerDiv.appendChild(repoCard)
 
