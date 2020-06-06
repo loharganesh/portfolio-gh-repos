@@ -1,2 +1,2 @@
 # git-repo-fetcher
-Live Demo  [a link](https://github.com/user/repo/blob/branch/other_file.md)
+[Click here to see live demo](https://socialapp-652fa.firebaseapp.com/)
